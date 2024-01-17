@@ -1,0 +1,40 @@
+<div class="borad-container">
+<h1 class ="heading">Mind Game</h1>
+<table>
+<tr>
+ 
+    <td (click)="gameService.changeGameState(0)">  <app-position-text [initialTextValue]="gameService.gameState[0]"></app-position-text></td>
+    <td (click)="gameService.changeGameState(1)">  <app-position-text [initialTextValue]="gameService.gameState[1]"></app-position-text></td>
+    <td (click)="gameService.changeGameState(2)">  <app-position-text [initialTextValue]="gameService.gameState[2]"></app-position-text></td>
+</tr>
+<tr>
+
+    <td (click)="gameService.changeGameState(3)">  <app-position-text [initialTextValue]="gameService.gameState[3]"></app-position-text></td>
+    <td (click)="gameService.changeGameState(4)">  <app-position-text [initialTextValue]="gameService.gameState[4]" ></app-position-text></td>
+    <td (click)="gameService.changeGameState(5)">  <app-position-text [initialTextValue]="gameService.gameState[5]" ></app-position-text></td>
+</tr>
+<tr>
+
+    <td (click)="gameService.changeGameState(6)">  <app-position-text [initialTextValue]="gameService.gameState[6]"></app-position-text></td>
+    <td (click)="gameService.changeGameState(7)">  <app-position-text [initialTextValue]="gameService.gameState[7]"></app-position-text></td>
+    <td (click)="gameService.changeGameState(8)">  <app-position-text [initialTextValue]="gameService.gameState[8]"></app-position-text></td>
+</tr>
+
+
+</table>
+
+
+<h1 *ngIf="gameService.gameOver && !gameService.draw">{{gameService.winner}} Won The Game</h1>
+<div>
+
+
+    <h1 *ngIf="gameService.gameOver && gameService.draw">
+        मैच ड्रा</h1>
+    <div>
+
+
+<div class="button-container">
+    <button (click)="gameService.restartGame()">Restart The Game</button>
+</div>
+
+</div>
